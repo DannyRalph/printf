@@ -10,6 +10,7 @@ int print_string(char *s)
 {
 	while (*s)
 		_putchar(*s++);
+return (0);
 }
 
 /**
@@ -52,6 +53,7 @@ int number_to_string(int64_t number, int base, char *buf)
 	for (j = i - 1; j >= 0; j--)
 		*buf++ = tmp[j];
 	*buf = '\0';
+return (1);
 }
 
 /**
@@ -63,16 +65,16 @@ int number_to_string(int64_t number, int base, char *buf)
 int print_ptr(va_list arg)
 {
 	char buffer[1024];
+	int n = va_arg(arg, int);
 
 	_putchar('0');
 
 	_putchar('x');
 
-	int n = va_arg(arg, int);
-
 	number_to_string(n, 16, buffer);
 
 	_printf(buffer);
+return (1);
 }
 
 /**
@@ -88,4 +90,5 @@ int print_oct(va_list arg)
 
 	number_to_string(n, 8, buffer);
 	_printf(buffer);
+return (1);
 }
