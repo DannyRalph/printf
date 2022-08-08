@@ -23,7 +23,7 @@ int print_string(char *s)
 int number_to_string(int64_t number, int base, char *buf)
 {
 	int i = 0, j;
-	char tmp[65];
+	char tmp[1024];
 
 	if (number < 0)
 	{
@@ -66,9 +66,9 @@ int print_ptr(va_list arg)
 
 	_putchar('0');
 
-	_putchar('X');
+	_putchar('x');
 
-	unsigned int n = va_arg(arg, int);
+	int n = va_arg(arg, int);
 
 	number_to_string(n, 16, buffer);
 
