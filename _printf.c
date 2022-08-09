@@ -87,6 +87,7 @@ int check_percent(int *flag, char aux)
 	tmp_flag = *flag;
 	if (tmp_flag == 2 && aux == '%')
 	{
+		_putchar('%');
 		tmp_flag = 0;
 		cont = 1;
 	}
